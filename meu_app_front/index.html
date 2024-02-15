@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <title>Cadastro de empresas</title>
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg nav-background">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><strong>EMPRESA XYZ</strong></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Clientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Empresas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contato</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Procurar...">
+                    <button class="btn btn-outline-primary" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="title">
+                <h1> CADASTRO DE EMPRESAS</h1>
+            </div>
+        </header>
+
+        <!-- Campo para cadastrar uma nova empresa -->
+        <section class="newItem">
+            <p> Insira os dados para cadastrar uma nova empresa:</p>
+            <div class="row g-3" class="form-control">
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="newInput" placeholder="Nome da empresa: ">
+                </div>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="newTradingName" placeholder="Nome fantasia:">
+                </div>
+                <div class="col-sm-4">
+                    <input type="number" class="form-control" id="newCnpj" placeholder="CNPJ:">
+                </div>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" id="newContact" placeholder="Nome do responsável:">
+                </div>
+                <div class="col-sm-3">
+                    <input type="number" class="form-control" id="newPhone" placeholder="Telefone: (DDD) + número">
+                </div>
+                <div class="col-sm-3">
+                    <input type="email" class="form-control" id="newEmail" placeholder="Email:">
+                </div>
+                <div class="col-sm-3">
+                    <button onclick="newItem()" class="btn btn-outline-primary">Cadastrar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Campo de empresas já cadastradas -->
+        <table class="table table-hover" id="myTable">
+            <thead>
+                <tr>
+                    <th scope="col">Nome da empresa</th>
+                    <th scope="col">Nome fantasia</th>
+                    <th scope="col">CNPJ</th>
+                    <th scope="col">Responsável</th>
+                    <th scope="col">Telefone</th>
+                    <th scope="col">Email</th>
+                    <th><img src="https://cdn-icons-png.flaticon.com/512/126/126468.png" width="15px" height="15px">
+                    </th>
+                </tr>
+            </thead>
+        </table>
+        </section>
+    </div>
+    <script src="scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.6/inputmask.min.js"></script>
+</body>
+
+</html>
